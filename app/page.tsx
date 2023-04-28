@@ -1,116 +1,207 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client";
+import React from "react";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+type Props = {};
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+interface Person {
+  id: number;
+  firstname: string;
+  lastname: string;
+  gender: string;
+  birthday: string;
+  phone: string;
+  image: string;
+  address: {
+    street: string;
+    city: string;
+    zipcode: number;
+    buildingNumber : number ;
+    streetName: string;
+    country: string;
+  };
 }
+const page = (props: Props) => {
+  const [data, setData] = React.useState<Array<Person>>([]);
+  const [expandedRow, setExpandedRow] = React.useState<number>();
+  const [rowCount, setRowCount] = React.useState<number>(10);
+  const [sortBy, setSortBy] = React.useState<string>("id");
+  const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("asc");
+  React.useEffect(() => {
+    const func = async () => {
+      const data1 = await fetch(
+        `https://fakerapi.it/api/v1/persons?_quantity=${rowCount}`
+      );
+      const data2 = await data1.json();
+      // console.log(data2);
+      setData(data2.data);
+    };
+
+    func();
+
+    // console.log(data);
+  }, [rowCount]);
+
+  React.useEffect(() => {
+    // console.log(sortBy , sortOrder);
+    const sortedData = [...data].sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a[sortBy as keyof Person] > b[sortBy as keyof Person] ? 1 : -1;
+      } else {
+        return a[sortBy as keyof Person] < b[sortBy as keyof Person] ? 1 : -1;
+      }
+    });
+    // console.log(sortedData)
+    setData(sortedData);
+  }, [sortBy, sortOrder]);
+
+  const handleSortClick = (column: string) => {
+    if (column === sortBy) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortOrder("asc");
+      setSortBy(column);
+    }
+  };
+
+  const handleClick = (id: number) => {
+    // console.log(id)
+    if (expandedRow === id) {
+      setExpandedRow(-1);
+    } else {
+      setExpandedRow(id);
+    }
+  };
+  return (
+    <div className="w-[60vw] flex flex-col justify-center">
+      <div>
+        <label htmlFor="numRows">Select Number of Rows</label>
+        <select
+          id="numRows"
+          className="rounded-lg"
+          value={rowCount}
+          onChange={(e) => setRowCount(parseInt(e.target.value))}
+        >
+          <option value={10}>10</option>
+          <option value={15}>15</option>
+          <option value={30}>30</option>
+          <option value={50}>50</option>
+        </select>
+      </div>
+
+      <table className="divide-y divide-slate-900  table-fixed">
+        <thead className="bg-gray-50">
+          <tr>
+            <th
+              className="px-6 py-2  text-center text-xs text-gray-500 cursor-pointer"
+              onClick={() => handleSortClick("id")}
+            >
+              ID
+            </th>
+            <th className="px-6 py-2  text-center text-xs text-gray-500">Avatar</th>
+            <th
+              className="px-6 py-2  text-center text-xs text-gray-500 cursor-pointer"
+              onClick={() => handleSortClick("firstname")}
+            >
+              First Name
+            </th>
+            <th
+              className="px-6 py-2  text-center text-xs text-gray-500 cursor-pointer"
+              onClick={() => handleSortClick("lastname")}
+            >
+              Last Name
+            </th>
+            <th
+              className="px-6 py-2  text-center text-xs text-gray-500 cursor-pointer"
+              onClick={() => handleSortClick("gender")}
+            >
+              Gender
+            </th>
+            <th
+              className="px-6 py-2  text-center text-xs text-gray-500 cursor-pointer"
+              onClick={() => handleSortClick("birthday")}
+            >
+              Age
+            </th>
+            <th className="px-6 py-2  text-center text-xs text-gray-500">Contact</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-300 w-[60vw]">
+          {data.map((item) => {
+            const birthdate = new Date(item.birthday);
+            const ageInMilliseconds = Date.now() - birthdate.getTime();
+            var ageInYears = ageInMilliseconds / 1000 / 60 / 60 / 24 / 365.25;
+            ageInYears = parseInt(ageInYears.toFixed(0));
+
+            return (
+              <React.Fragment key={item.id}>
+                <tr
+                  className="whitespace-nowrap"
+                  onClick={() => handleClick(item.id)}
+                >
+                  <td className="px-6 py-4 text-center  text-sm text-gray-500 text-wrap">
+                    {item.id}
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <img
+                      src={item.image}
+                      alt={item.firstname}
+                      className="h-8 w-8 rounded-full"
+                    />
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <div className="text-sm text-gray-500">
+                      {item.firstname}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                    {item.lastname}
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                    {item.gender}
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                    {ageInYears}
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                    {item.phone}
+                  </td>
+                </tr>
+
+                {expandedRow === item.id && (
+                  <tr
+                    key={`${item.id}-expanded`}
+                    className="whitespace-nowrap bg-slate-400"
+                  >
+                    <td className="px-6 py-4 text-center"></td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.buildingNumber}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.street}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.streetName}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.city}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.country}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-gray-500 text-wrap">
+                      {item.address.zipcode}
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default page;
